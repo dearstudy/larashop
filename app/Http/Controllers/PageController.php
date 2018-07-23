@@ -10,4 +10,9 @@ class PageController extends Controller
     {
         return view('pages.home');
     }
+
+    public function emailVerifyNotice(Request $request)
+    {
+        return view('pages.email_verify_notice');
+    }
 }
