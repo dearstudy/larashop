@@ -14,7 +14,6 @@
 Route::redirect('', 'products')->name('home');
 
 Route::get('products', 'ProductController@index')->name('products.index');
-Route::get('products/{product}', 'ProductController@show')->name('products.show');
 
 Auth::routes();
 
@@ -33,6 +32,8 @@ Route::group(['middleware' => 'auth'], function() {
 
         Route::post('products/{product}/favorite', 'ProductController@favor')->name('products.favor');
         Route::delete('products/{product}/favorite', 'ProductController@disfavor')->name('products.disfavor');
+        Route::get('products/favorites', 'ProductController@favorites')->name('products.favorites');
     });
-
 });
+
+Route::get('products/{product}', 'ProductController@show')->name('products.show');
