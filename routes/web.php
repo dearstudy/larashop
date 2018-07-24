@@ -14,6 +14,7 @@
 Route::redirect('', 'products')->name('home');
 
 Route::get('products', 'ProductController@index')->name('products.index');
+Route::get('products/{product}', 'ProductController@show')->name('products.show');
 
 Auth::routes();
 
