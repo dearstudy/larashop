@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'zh-CN',
 
     /*
     |--------------------------------------------------------------------------
@@ -103,6 +103,7 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
+    'faker_locale' => 'zh_CN',
 
     'key' => env('APP_KEY'),
 
